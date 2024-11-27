@@ -9,7 +9,7 @@ const colors = {
 	neutral: {
 		'grey-500': 'hsl(186, 15%, 59%)',
 		'grey-900': 'hsl(169, 82%, 27%)',
-		'grey-500': 'hsl(0, 66%, 54%)',
+		white: 'hsl(0, 0%, 100%)',
 	},
 }
 

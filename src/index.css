@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Karla';
+		font-style: normal;
+		font-weight: 400;
+		src: url('../public/fonts/static/Karla-Regular.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'Karla';
+		font-style: normal;
+		font-weight: 700;
+		src: url('../public/fonts/static/Karla-Bold.ttf') format('truetype');
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Karla', sans-serif;
+	background-color: hsl(148, 38%, 91%);
+}
+
+svg {
+	display: flex;
+	align-items: center;
+}

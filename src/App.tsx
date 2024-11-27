@@ -1,7 +1,12 @@
 import './App.css'
+import { MainForm } from './components/main-form'
 
 function App() {
-	return <></>
+	return (
+		<>
+			<MainForm />
+		</>
+	)
 }
 
 export default App

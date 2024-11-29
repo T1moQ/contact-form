@@ -1,5 +1,8 @@
 import { FC } from 'react'
 import { Input } from './input'
+import { Radio } from './radio'
+import { Textarea } from './textarea'
+import { Checkbox } from './checkbox'
 
 export const MainForm: FC = () => {
 	return (
@@ -11,6 +14,21 @@ export const MainForm: FC = () => {
 				<Input lable="First Name" type="text" required className="mt-6" />
 				<Input lable="Last Name" type="text" required className="mt-6" />
 				<Input lable="Email Address" type="email" required className="mt-6" />
+				<Radio
+					options={['General Enquiry', 'Support Request']}
+					lable="Query Type"
+					required
+					className="mt-6"
+				/>
+				<Textarea label="Message" required className="mt-6" />
+				<Checkbox
+					lable="I consent to being contacted by the team"
+					className="mt-9"
+					required
+				/>
+				<button className="text-neutral-white font-bold bg-primary-green-600 py-4 px-6 rounded-lg mt-10 w-full">
+					Submit
+				</button>
 			</form>
 		</main>
 	)

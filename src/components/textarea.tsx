@@ -1,23 +1,22 @@
 import { FC } from 'react'
 
-type InputProps = {
+type TextareaProps = {
 	className?: string
-	lable?: string
-	type?: string
+	label: string
 	required?: boolean
 }
 
-export const Input: FC<InputProps> = ({ className, lable, type, required }) => {
+export const Textarea: FC<TextareaProps> = ({ className, label, required }) => {
 	return (
 		<div className={`flex flex-col items-start ${className}`}>
 			<label className="text-[16px] text-primary-green-600">
-				{lable} {required && '*'}
+				{label} {required && '*'}
 			</label>
-			<input
-				type={type}
+			<textarea
+				rows={9}
 				required={required}
 				className="border border-primary-green-600 mt-2 rounded-lg p-3 w-full"
-			/>
+			></textarea>
 		</div>
 	)
 }

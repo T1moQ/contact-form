@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { FormValues } from '../icons/utils/types'
+import { FormValues } from '../utils/types'
 import { FieldError, UseFormRegister } from 'react-hook-form'
 import cn from 'classnames'
 

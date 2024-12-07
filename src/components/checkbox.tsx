@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Check } from '../icons/check'
-import { FormValues } from '../icons/utils/types'
+import { FormValues } from '../utils/types'
 import { FieldError, UseFormRegister } from 'react-hook-form'
 
 type CheckboxProps = {

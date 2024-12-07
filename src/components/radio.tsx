@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { FieldError, UseFormRegister } from 'react-hook-form'
-import { FormValues } from '../icons/utils/types'
+import { FormValues } from '../utils/types'
 
 type RadioProps = {
 	lable?: string

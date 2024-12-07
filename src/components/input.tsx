@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { FieldError, UseFormRegister } from 'react-hook-form'
-import { FormValues } from '../icons/utils/types'
+import { FormValues } from '../utils/types'
 import cn from 'classnames'
 
 type InputProps = {

@@ -18,8 +18,10 @@ export const Form: FC = () => {
 	const onSubmit = (data: unknown) => {
 		console.log('Форма отправлена', data)
 		reset()
-		setSuccessMessage(<SuccessBanner className="fixed z-30 top-4 left-0" />)
-		setTimeout(() => setSuccessMessage(null), 5000)
+		setSuccessMessage(
+			<SuccessBanner className="fixed z-30 top-4 left-0 lg:left-1/3 lg:top-8" />
+		)
+		// setTimeout(() => setSuccessMessage(null), 5000)
 	}
 
 	const [successMessage, setSuccessMessage] = useState<ReactNode | null>(null)
@@ -28,24 +30,26 @@ export const Form: FC = () => {
 		<>
 			{successMessage}
 			<form noValidate onSubmit={handleSubmit(onSubmit)}>
-				<Input
-					name="firstName"
-					register={register}
-					error={errors.firstName}
-					lable="First Name"
-					type="text"
-					required
-					className="mt-6"
-				/>
-				<Input
-					name="lastName"
-					register={register}
-					error={errors.lastName}
-					lable="Last Name"
-					type="text"
-					required
-					className="mt-6"
-				/>
+				<div className="flex flex-col lg:flex-row lg:justify-between lg:gap-4">
+					<Input
+						name="firstName"
+						register={register}
+						error={errors.firstName}
+						lable="First Name"
+						type="text"
+						required
+						className="mt-6 w-full lg:w-1/2"
+					/>
+					<Input
+						name="lastName"
+						register={register}
+						error={errors.lastName}
+						lable="Last Name"
+						type="text"
+						required
+						className="mt-6 w-full lg:w-1/2"
+					/>
+				</div>
 				<Input
 					lable="Email Address"
 					type="email"
@@ -62,7 +66,7 @@ export const Form: FC = () => {
 					options={['General Enquiry', 'Support Request']}
 					lable="Query Type"
 					required
-					className="mt-6"
+					className="mt-7"
 				/>
 				<Textarea
 					name="message"
@@ -70,7 +74,7 @@ export const Form: FC = () => {
 					error={errors.message}
 					label="Message"
 					required
-					className="mt-6"
+					className="mt-6 lg:h-36"
 				/>
 				<Checkbox
 					name="consent"
